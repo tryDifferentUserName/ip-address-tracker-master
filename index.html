@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+ crossorigin=""></script>
+ <script src="./javascript/ipApi.js" defer></script>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>
+      IP Address Tracker
+    </h1>
+    <div class="d-flex">
+      <input id="js-input" type="text" placeholder="IP Address" >
+      <button id="js-button" ><img src="./images/icon-arrow.svg" alt="" ></button>
+    </div>
+  </header>
+  <main>
+    <div class="output-container">
+      <div>
+        <label for="js-ip-output">ip address</label>
+        <output id="js-ip-output"></output>
+      </div>
+      <div>
+        <label for="js-location-output">location</label>
+        <output id="js-location-output"></output>
+      </div>
+      <div>
+        <label for="js-timezone-output">timezone</label>
+        <output id="js-timezone-output"></output>
+      </div>
+      <div>
+        <label for="js-isp-output">isp</label>
+        <output id="js-isp-output"></output>
+      </div>
+    </div>
+    <div id="mapid" style="height: 100vh"></div>
+  </main>
+</div>
+</body>
+</html>

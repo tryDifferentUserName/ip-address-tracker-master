@@ -1,0 +1,155 @@
+@import url("https://fonts.google.com/specimen/Rubik");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+header {
+  background-image: url("../images/pattern-bg.png");
+  background-repeat: no-repeat;
+  height: 35vh;
+  width: 100%;
+  padding-top: 1em;
+}
+button {
+  background: #000;
+  border-radius: 0 15px 15px 0;
+  border: none;
+  padding: 1em;
+}
+input {
+  border-radius: 15px 0 0 15px;
+  border: none;
+  padding: 0.7em 2em;
+}
+
+.container {
+  height: 100vh;
+}
+main {
+  position: relative;
+  height: 100vh;
+}
+h1 {
+  color: #fff;
+  font-size: 1.5rem;
+  padding-bottom: 1em;
+}
+.output-container {
+  position: absolute;
+  top: -80px;
+  left: 10%;
+  width: 80%;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 15px;
+}
+label {
+  font-size: 0.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 59%);
+  padding: 0.5em 0;
+}
+output {
+  font-size: 1.2rem;
+  font-weight: 900;
+  padding: 0 0 0.5em;
+}
+#mapid {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+.d-flex {
+  display: flex;
+  justify-content: center;
+}
+.output-container div {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 780px) {
+  .output-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  input {
+    padding: 0.7em 5em;
+  }
+  .output-container div {
+    border-left: 1px solid gray;
+    padding: 1.5em 1em;
+  }
+  label {
+    text-align: left;
+  }
+}
